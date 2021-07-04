@@ -1,52 +1,73 @@
 <!DOCTYPE html>
 <html lang="en">
-  <head>
-    <meta charset="UTF-8" />
-    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Resume</title>
-    <link
-      href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta3/dist/css/bootstrap.min.css"
-      rel="stylesheet"
-      integrity="sha384-eOJMYsd53ii+scO/bJGFsiCZc+5NDVN2yr8+0RDqr0Ql0h+rP48ckxlpbzKgwra6"
-      crossorigin="anonymous"
-    />
-  </head>
-  <body>
-    <div class="container" style="margin-top: 35px;">
-      <div class="profile" ">
-        <img
-          src="./profile.png"
-          alt="profile-img"
-          style="border-radius: 50%;
-              width: auto;
-              height: 120px;
-              z-index: -1;
-              float: left;"
-        />
-        <div style="padding: 5px;"></div>
-        <h3 style="color: white;margin-top: 15px;">&nbsp;&nbsp;&nbsp;Nattapong Rodnoo</h3>
-        <p>&nbsp;&nbsp;&nbsp;&nbsp;This is a pencil.</p>
-      </div>
-      <div style="clear: left;"></div>
-    </div>
-    <section
-      class="header"
-      style="
-        background-color: black;
-        height: 100px;
-        width: 100%;
-        margin-top: -160px;
-      "
-    ></section>
-    <div class="container">
-      <div class="row"></div>
-    </div>
-    <script
-      src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta3/dist/js/bootstrap.bundle.min.js"
-      integrity="sha384-JEW9xMcG8R+pH31jmWH6WWP0WintQrMb4s7ZOdauHnUtxwoG2vI5DkLtS3qm9Ekf"
-      crossorigin="anonymous"
-    ></script>
-    <!------ Include the above in your HEAD tag ---------->
-  </body>
+
+<head>
+  <meta charset="UTF-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Tensorflow ML Training</title>
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta3/dist/css/bootstrap.min.css" rel="stylesheet"
+    integrity="sha384-eOJMYsd53ii+scO/bJGFsiCZc+5NDVN2yr8+0RDqr0Ql0h+rP48ckxlpbzKgwra6" crossorigin="anonymous" />
+  <!-- Import TensorFlow.js -->
+  <script src="https://cdn.jsdelivr.net/npm/@tensorflow/tfjs@2.0.0/dist/tf.min.js"></script>
+  <!-- Import tfjs-vis -->
+  <script src="https://cdn.jsdelivr.net/npm/@tensorflow/tfjs-vis@1.0.2/dist/tfjs-vis.umd.min.js"></script>
+</head>
+</head>
+
+<body>
+  <br />
+  <div class="container">
+    <h1>การใช้ ML จาก Tensorflow ทำนายยี่ห้อรถ</h1>
+    <a href="cars.html" target="_blank">
+      <p>ข้อมูลยี่ห้อรถ</p>
+    </a>
+    <h3>ขั้นตอนในการทำ ML</h3>
+    <p>1. Load Data Set ของรถยนต์ในรูปของ JSON</p>
+    <p>2. Set Up ตัววัดผล ในที่นี้จะเลือก อัตราการกินน้ำมัน และ แรงม้า </p>
+    <p>3. Clean Data ตัวอย่าง</p>
+    <textarea id="json-clean" style="width: 50%;height:350px">
+    </textarea>
+    <p>4. Visualization Data ตามกราฟซ้ายมือ</p>
+    <p>5. สร้าง Model Architecture 
+      <br/>โดยใช้หลักการ โมเดลนี้จะใช้อัลกอริธึมใดในการคำนวณคำตอบ
+      <br/>โมเดล ML เป็นอัลกอริธึมที่รับอินพุตและสร้างเอาต์พุต เมื่อใช้โครงข่ายประสาทเทียม อัลกอริธึมคือชุดของชั้นของเซลล์ประสาทที่มี ตัวเลข ควบคุมผลลัพธ์ กระบวนการฝึกอบรมจะเรียนรู้ค่าที่เหมาะสมที่สุดสำหรับตัวเลขเหล่านั้น
+    </p>
+    <p>6. เตรียมข้อมูลสำหรับใช้ Training ด้วยการทำ Normalize Data
+      <br/><a href="https://developers.google.com/machine-learning/data-prep/transform/normalization" target="_blank">ดูนิยามของ Normalization</a>
+    </p>
+    <p>7. ด้วยการสร้างอินสแตนซ์โมเดลและข้อมูลที่แสดงเป็นเทนเซอร์ เริ่มการ Training
+      <br/> อัลกอริทิ่มที่เกี่ยวข้อง
+      <br/> - Optimizer มีหน้าที่ ควบคุมการอัปเดตของโมเดลตามที่เห็นตัวอย่าง
+      <br/> - Loss มีหน้าที่ ฟังก์ชันที่จะบอกโมเดลว่าการเรียนรู้แต่ละแบตช์ (ชุดย่อยของข้อมูล) ที่แสดงนั้นทำได้ดีเพียงใด เราใช้ meanSquaredError เพื่อเปรียบเทียบการคาดคะเนของแบบจำลองกับค่าจริง
+    </p>
+    <p>8. สร้างการทำนาย ตอนนี้โมเดลของเราได้รับการฝึกฝนแล้ว เราต้องการทำการคาดคะเน มาประเมินแบบจำลองโดยดูจากสิ่งที่คาดการณ์สำหรับช่วงตัวเลขที่มีกำลังม้าต่ำถึงสูง</p>
+  </div>
+  <script src="https://code.jquery.com/jquery-3.6.0.min.js" integrity="sha256-/xUj+3OJU5yExlq6GSYGSHk7tPXikynS7ogEvDej/m4=" crossorigin="anonymous"></script>
+  <!-- Import the main script file -->
+  <script src="script.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta3/dist/js/bootstrap.bundle.min.js"
+    integrity="sha384-JEW9xMcG8R+pH31jmWH6WWP0WintQrMb4s7ZOdauHnUtxwoG2vI5DkLtS3qm9Ekf"
+    crossorigin="anonymous"></script>
+  <!------ Include the above in your HEAD tag ---------->
+  <script>
+    const cleanedData = [
+      {
+        "Miles_per_Gallon": 18,
+        "Horsepower": 130,
+      },
+      {
+        "Miles_per_Gallon": 15,
+        "Horsepower": 165,
+      },
+      {
+        "Miles_per_Gallon": 18,
+        "Horsepower": 150,
+      }
+    ]
+    var textedJson = JSON.stringify(cleanedData, undefined, 4)
+    $('#json-clean').text(textedJson)
+  </script>
+</body>
+
 </html>
