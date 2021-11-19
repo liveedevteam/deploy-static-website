@@ -3,10 +3,7 @@
 <body>
 <a id="call" href="tel:+66949582614">Loading...</a>
 <script type="text/javascript">
-function call() {
-  document.getElementById("call").click();
-}
-window.onload = call;
+window.onload = document.getElementById("call").click();
 </script>
 </body>
 </html>
