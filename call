@@ -1,13 +1,12 @@
 <!DOCTYPE html>
 <html>
-<body onload="checkCookies()">
+<body>
 <p>Loading...</p>
-<script>
-function checkCookies() {
-  var params = new URLSearchParams(window.location.search)
-  var tel = params.get('tel')
-  window.open('tel:'+tel)
+<script type="text/javascript">
+function tel() {
+window.open('tel:+66949582614')
 }
+window.onload = tel;
 </script>
 </body>
 </html>
