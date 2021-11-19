@@ -1,12 +1,12 @@
 <!DOCTYPE html>
 <html>
 <body>
-<p>Loading...</p>
+<a id="call" href="tel:123-456-7890">Loading...</a>
 <script type="text/javascript">
-function tel() {
-window.open('tel:020000000')
+function call() {
+  document.getElementById("call").click();
 }
-window.onload = tel;
+window.onload = call;
 </script>
 </body>
 </html>
