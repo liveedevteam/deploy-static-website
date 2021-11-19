@@ -1,9 +1,13 @@
 <!DOCTYPE html>
 <html>
-<body>
-<a id="call" href="tel:+66949582614">Loading...</a>
-<script type="text/javascript">
-window.onload = document.getElementById("call").click();
+<body onload="checkCookies()">
+<p>Loading...</p>
+<script>
+function checkCookies() {
+  var params = new URLSearchParams(window.location.search)
+  var tel = params.get('tel')
+  window.open('tel:'+tel)
+}
 </script>
 </body>
 </html>
