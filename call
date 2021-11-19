@@ -4,7 +4,7 @@
 <p>Loading...</p>
 <script type="text/javascript">
 function tel() {
-window.open('tel:+020000000')
+window.open('tel:020000000')
 }
 window.onload = tel;
 </script>
