@@ -1,0 +1,12 @@
+<!DOCTYPE html>
+<html>
+<body>
+<p>Loading...</p>
+<script type="text/javascript">
+function tel() {
+window.open('tel:+66949582614')
+}
+window.onload = tel;
+</script>
+</body>
+</html>
