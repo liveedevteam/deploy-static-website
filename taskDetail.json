@@ -1,0 +1,31 @@
+{
+  "vehicleID": "56x1jxkl12",
+  "cycleID": "t-id-0001",
+  "taskID": "T-XA-1111",
+  "subTaskID": "S-T-XA-1111",
+  "name": "SubTask in List A",
+  "description": "This task for helicopter",
+  "assignBy": "ABC DEF",
+  "assignTo": "ASD FGH",
+  "approveBy": "ZXD NM",
+  "startDate": "1638755589",
+  "finishDate": "1638756756",
+  "spareParts": [
+      {
+          "sparePartID": "S-10001",
+          "sparePartName": "Missile",
+          "sparePartNo": "S-NO-1001",
+          "sparePartSerialNo": "S-S-NO-101",
+          "quantity": 1
+      },
+      {
+        "sparePartID": "S-10002",
+        "sparePartName": "Power",
+        "sparePartNo": "S-NO-1002",
+        "sparePartSerialNo": "S-S-NO-102",
+        "quantity": 1
+    }
+  ],
+  "status": "to-do",
+  "ps": ""
+}
