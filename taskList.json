@@ -1,0 +1,39 @@
+{
+  "vehicleID": "56x1jxkl12",
+  "name": "Task A",
+  "description": "This task for helicopter",
+  "taskList": [
+    {
+      "taskID": "T-XA-1111",
+      "taskName": "200 ชั่วโมง",
+      "taskDetail": "การตรวจการซ่อมบำรุงเมื่อเฮลิคอปเตอร์ครบ 200 ชั่วโมง",
+      "subTaskList": [
+        {
+          "_id": "S-T-XA-1111"
+        },
+        {
+          "_id": "S-T-XA-1112"
+        },
+        {
+          "_id": "S-T-XA-1113"
+        }
+      ]
+    },
+    {
+      "taskID": "T-XA-1112",
+      "taskName": "500 ชั่วโมง",
+      "taskDetail": "การตรวจการซ่อมบำรุงเมื่อเฮลิคอปเตอร์ครบ 500 ชั่วโมง",
+      "subTaskList": [
+        {
+          "_id": "S-T-XA-11114"
+        },
+        {
+          "_id": "S-T-XA-11124"
+        },
+        {
+          "_id": "S-T-XA-11134"
+        }
+      ]
+    }
+  ]
+}
