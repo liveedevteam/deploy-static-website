@@ -1,28 +1,29 @@
 {
+  "_id": "56x1jxkl12",
   "name": "BlackHawk",
   "description": "This is a helicopter",
   "imgURL": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSS9j7J7v19t4iSIC0lRET37gaPq76xBzH48g&usqp=CAU",
   "arrivedAt": "1638755589",
   "vehicleNo": "1-AH12FG-XQ5",
   "spareParts": [
-      {
-          "sparePartID": "XA-1111",
-          "sparePartName": "ใบพัด",
-          "sparePartNo": "Nu-XA-1111",
-          "sparePartSerialNo": "SE-XA-1111"
-      },
-      {
-        "sparePartID": "XA-1112",
-        "sparePartName": "เครื่องยนต์",
-        "sparePartNo": "Nu-XA-1112",
-        "sparePartSerialNo": "SE-XA-1112"
+    {
+      "sparePartID": "XA-1111",
+      "sparePartName": "ใบพัด",
+      "sparePartNo": "Nu-XA-1111",
+      "sparePartSerialNo": "SE-XA-1111"
+    },
+    {
+      "sparePartID": "XA-1112",
+      "sparePartName": "เครื่องยนต์",
+      "sparePartNo": "Nu-XA-1112",
+      "sparePartSerialNo": "SE-XA-1112"
     }
   ],
   "manualPDFs": [
-      {
-          "pdfName": "คู่มือการซ่อม A",
-          "pdfDetail": "ใช้สำหรับการซ่อม xxxxx",
-          "pdfURL": "http://www.africau.edu/images/default/sample.pdf"
-      }
+    {
+      "pdfName": "คู่มือการซ่อม A",
+      "pdfDetail": "ใช้สำหรับการซ่อม xxxxx",
+      "pdfURL": "http://www.africau.edu/images/default/sample.pdf"
+    }
   ]
 }
