@@ -1,0 +1,21 @@
+{
+  "_id": "xxxxxx",
+  "firstName": "fname",
+  "lastName": "lname",
+  "NID": "1111111111111",
+  "NIDIMGURL": "https://s3-bucket.com/buckets/img.jpg",
+  "telephoneNumber": "0949281534",
+  "addressType": "apartment",
+  "address": {
+    "name": "",
+    "floor": "",
+    "roomNumber": ""
+  },
+  "latLng": {
+    "lat": 2.111111,
+    "lng": 1.111111
+  }
+  "status": "verified",
+  "createDate":"",
+  "updateDate":""
+}
