@@ -1,0 +1,8 @@
+{
+  "firstName": "fname",
+  "lastName": "lname",
+  "NID": "1111111111111",
+  "NIDIMGURL": "https://s3-bucket.com/buckets/img.jpg",
+  "telephoneNumber": "0949281534",
+  "status": "verified"
+}
